@@ -26,26 +26,7 @@ public class Customer {
         result.append("Rental Record for ").append(getName()).append("\n");
 
         for (Rental rental : rentals) {
-            double thisAmount = 0;
-
-            // determine amounts for each line
-            switch (rental.getMovie().getPriceCode()) {
-                case Movie.REGULAR:
-                    thisAmount += 2;
-                    if (rental.getDaysRented() > 2) {
-                        thisAmount += (rental.getDaysRented() - 2) * 1.5;
-                    }
-                    break;
-                case Movie.NEW_RELEASE:
-                    thisAmount += rental.getDaysRented() * 3;
-                    break;
-                case Movie.CHILDREN:
-                    thisAmount += 1.5;
-                    if (rental.getDaysRented() > 3) {
-                        thisAmount += (rental.getDaysRented() - 3) * 1.5;
-                    }
-                    break;
-            }
+            double thisAmount = countAmount(rental);
 
             // add frequent renter points
             frequentRenterPoints++;
@@ -62,5 +43,29 @@ public class Customer {
         result.append("Amount owed is ").append(String.valueOf(totalAmount)).append("\n");
         result.append("You earned ").append(String.valueOf(frequentRenterPoints)).append(" frequent renter points");
         return result.toString();
+    }
+
+    private double countAmount(Rental rental) {
+        double result = 0;
+
+        // determine amounts for each line
+        switch (rental.getMovie().getPriceCode()) {
+            case Movie.REGULAR:
+                result += 2;
+                if (rental.getDaysRented() > 2) {
+                    result += (rental.getDaysRented() - 2) * 1.5;
+                }
+                break;
+            case Movie.NEW_RELEASE:
+                result += rental.getDaysRented() * 3;
+                break;
+            case Movie.CHILDREN:
+                result += 1.5;
+                if (rental.getDaysRented() > 3) {
+                    result += (rental.getDaysRented() - 3) * 1.5;
+                }
+                break;
+        }
+        return result;
     }
 }
