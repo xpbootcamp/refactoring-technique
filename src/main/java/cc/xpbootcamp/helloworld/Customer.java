@@ -26,13 +26,8 @@ public class Customer {
         result.append("Rental Record for ").append(getName()).append("\n");
 
         for (Rental rental : rentals) {
+            frequentRenterPoints += rental.getFrequentRenterPoints();
 
-            // add frequent renter points
-            frequentRenterPoints++;
-            // add bonus  for a two day new release rental
-            if (rental.getMovie().getPriceCode() == Movie.NEW_RELEASE && rental.getDaysRented() > 1) {
-                frequentRenterPoints++;
-            }
             // show figures for this rental
             result.append("\t").append(rental.getMovie().getTitle()).append("\t")
                     .append(String.valueOf(rental.getCharge())).append("\n");
