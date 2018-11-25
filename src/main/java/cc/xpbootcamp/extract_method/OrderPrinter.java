@@ -6,6 +6,11 @@ public class OrderPrinter {
     private List<Order> orders;
     private String name;
 
+    public OrderPrinter(String name, List<Order> orders) {
+        this.name = name;
+        this.orders = orders;
+    }
+
     public void print() {
         // print banner
         System.out.println("****************************************");
