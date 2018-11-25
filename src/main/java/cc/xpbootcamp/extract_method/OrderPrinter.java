@@ -14,9 +14,7 @@ public class OrderPrinter {
     public void print() {
         printBanner();
 
-        double outstanding = getOutstanding();
-
-        printDetail(outstanding);
+        printDetail(getOutstanding());
     }
 
     private double getOutstanding() {
