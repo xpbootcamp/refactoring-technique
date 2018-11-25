@@ -14,13 +14,18 @@ public class OrderPrinter {
     public void print() {
         printBanner();
 
+        double outstanding = getOutstanding();
+
+        printDetail(outstanding);
+    }
+
+    private double getOutstanding() {
         double outstanding = 0.0;
 
         for (Order order : orders) {
             outstanding += order.getAmount();
         }
-
-        printDetail(outstanding);
+        return outstanding;
     }
 
     private void printDetail(double outstanding) {
