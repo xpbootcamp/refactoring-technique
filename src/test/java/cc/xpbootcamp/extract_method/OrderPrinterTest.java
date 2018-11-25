@@ -23,15 +23,15 @@ class OrderPrinterTest {
     void should_print_correct_order() {
         OrderPrinter orderPrinter = new OrderPrinter("电子产品",
                 Arrays.asList(new Order(5), new Order(1.5)));
-        orderPrinter.print();
-        StringBuilder expectedOutput = new StringBuilder();
-        expectedOutput.append("****************************************\n");
-        expectedOutput.append("*************Customer Owes *************\n");
-        expectedOutput.append("****************************************\n");
-        expectedOutput.append("name: 电子产品\n");
-        expectedOutput.append("amount: 6.5\n");
 
-        assertThat(String.valueOf(outContent)).isEqualTo(expectedOutput.toString());
+        orderPrinter.print();
+
+        String expectedOutput = "****************************************\n" +
+                                "*************Customer Owes *************\n" +
+                                "****************************************\n" +
+                                "name: 电子产品\n" +
+                                "amount: 6.5\n";
+        assertThat(String.valueOf(outContent)).isEqualTo(expectedOutput);
     }
 
     @AfterEach
