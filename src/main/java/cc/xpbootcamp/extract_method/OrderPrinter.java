@@ -20,7 +20,10 @@ public class OrderPrinter {
             outstanding += order.getAmount();
         }
 
-        // print detail
+        printDetail(outstanding);
+    }
+
+    private void printDetail(double outstanding) {
         System.out.println("name: " + name);
         System.out.println("amount: " + outstanding);
     }
