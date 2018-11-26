@@ -10,13 +10,18 @@ public class Order {
     }
 
     double getPrice() {
+        double discountFactor = discountFactor();
+        return basePrice() * discountFactor;
+    }
+
+    private double discountFactor() {
         double discountFactor;
         if (basePrice() > 100) {
             discountFactor = 0.95;
         } else {
             discountFactor = 0.98;
         }
-        return basePrice() * discountFactor;
+        return discountFactor;
     }
 
     private double basePrice() {
