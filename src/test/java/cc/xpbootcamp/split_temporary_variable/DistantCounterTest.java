@@ -8,9 +8,9 @@ class DistantCounterTest {
 
     @Test
     void should_count_correct_distance() {
-        double distanceTravelled = new DistantCounter(9.5, 5, 2).getDistanceTravelled(2);
+        double distanceTravelled = new DistantCounter(9.5, 20, 2).getDistanceTravelled(5);
 
-        assertThat(distanceTravelled).isEqualTo(3.8);
+        assertThat(distanceTravelled).isEqualTo(3.7874999999999996);
     }
 
 }

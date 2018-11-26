@@ -13,14 +13,14 @@ public class DistantCounter {
 
     double getDistanceTravelled(int time) {
         double result;
-        double acc = primaryForce / mass;
+        double primaryAcc = primaryForce / mass;
         int primaryTime = Math.min(time, delay);
-        result = 0.5 * acc * primaryTime * primaryTime;
+        result = 0.5 * primaryAcc * primaryTime * primaryTime;
         int secondaryTime = time - delay;
 
         if (secondaryTime > 0) {
-            double primaryVel = acc * delay;
-            acc = (primaryForce + secondaryTime) / mass;
+            double primaryVel = primaryAcc * delay;
+            double acc = (primaryForce + secondaryTime) / mass;
             result = primaryVel * secondaryTime + 0.5 * acc * secondaryTime;
         }
         return result;
