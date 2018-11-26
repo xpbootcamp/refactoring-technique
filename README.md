@@ -22,7 +22,7 @@
  
 ## Kit列表
 1. EM: Extract Method
-
+2. RTWQ: Replace Temp with Query
 
 ## 参考资料
 - [JUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
