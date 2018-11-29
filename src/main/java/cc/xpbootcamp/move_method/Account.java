@@ -9,10 +9,6 @@ public class Account {
         this.type = type;
     }
 
-    public double overdraftCharge() {
-        return type.overdraftCharge(daysOverdrawn);
-    }
-
     double bankCharge() {
         double result = 4.5;
         if (daysOverdrawn > 0) {
