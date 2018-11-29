@@ -25,6 +25,7 @@
 2. RTWQ: Replace Temp with Query
 3. STV: Split Temporary Variable
 4. RMWMO: Replace Method with Method Object
+5. MM: Move Method
 
 ## 参考资料
 - [JUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
