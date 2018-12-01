@@ -1,20 +1,18 @@
 package cc.xpbootcamp.replace_data_value_with_object;
 
-import java.util.List;
-
 public class Order {
-    private String customer;
+    private Customer customer;
 
-    public Order(String customer) {
-        this.customer = customer;
+    public Order(String customerName) {
+        this.customer = new Customer(customerName);
     }
 
-    public String getCustomer() {
-        return customer;
+    public String getCustomerName() {
+        return customer.getName();
     }
 
-    public void setCustomer(String customer) {
-        this.customer = customer;
+    public void setCustomer(String customerName) {
+        this.customer = new Customer(customerName);
     }
 
 }

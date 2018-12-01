@@ -20,5 +20,5 @@ class OrderServiceTest {
         List<Order> orders = Arrays.asList(new Order("sjyuan3"), new Order("sjyuan1"));
         assertThat(OrderService.countCustomerOrders("sjyuan", orders)).isEqualTo(0);
     }
-    
+
 }
