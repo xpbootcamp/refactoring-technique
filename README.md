@@ -27,6 +27,7 @@
 4. RMWMO: Replace Method with Method Object
 5. MM: Move Method
 6. MF: Move Field
+7. RDVWO: Replace Data Value with Object
 
 ## 参考资料
 - [JUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
