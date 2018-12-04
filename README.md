@@ -29,6 +29,7 @@
 6. MF: Move Field
 7. RDVWO: Replace Data Value with Object
 8. CVTR: Change Value to Reference
+9. CRTV: Change Reference to Value
 
 ## 参考资料
 - [JUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
