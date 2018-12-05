@@ -15,14 +15,10 @@ public class Currency {
         this.code = code;
     }
 
-    public static Currency get(String code) {
-        return new Currency(code);
-    }
 
     public String getCode() {
         return code;
     }
-
 
     @Override
     public boolean equals(Object o) {

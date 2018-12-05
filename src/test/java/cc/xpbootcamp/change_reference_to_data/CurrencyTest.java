@@ -8,8 +8,8 @@ class CurrencyTest {
 
     @Test
     void should_get_same_currency() {
-        Currency rmb1 = Currency.get("RMB");
-        Currency rmb2 = Currency.get("RMB");
+        Currency rmb1 = new Currency("RMB");
+        Currency rmb2 = new Currency("RMB");
 
         assertThat(rmb1).isEqualTo(rmb2);
     }
