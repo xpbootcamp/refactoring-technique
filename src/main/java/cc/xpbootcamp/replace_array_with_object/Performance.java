@@ -15,7 +15,7 @@ public class Performance {
         return data[0];
     }
 
-    public String getWins() {
-        return data[1];
+    public int getWins() {
+        return Integer.parseInt(data[1]);
     }
 }

@@ -13,7 +13,7 @@ class PrimitiveParanoiaTest {
         performance.setWins("15");
 
         String name = performance.getName();
-        int wins = Integer.parseInt(performance.getWins());
+        int wins = performance.getWins();
 
         assertThat(name).isEqualTo("Liverpool");
         assertThat(wins).isEqualTo(15);
