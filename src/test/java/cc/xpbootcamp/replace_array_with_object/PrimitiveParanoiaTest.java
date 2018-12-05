@@ -8,12 +8,12 @@ class PrimitiveParanoiaTest {
 
     @Test
     void should_store_correct_data_with_container() {
-        String[] row = new String[3];
-        row[0] = "Liverpool";
-        row[1] = "15";
+        Performance performance = new Performance();
+        performance.setName("Liverpool");
+        performance.setWins("15");
 
-        String name = row[0];
-        int wins = Integer.parseInt(row[1]);
+        String name = performance.getName();
+        int wins = Integer.parseInt(performance.getWins());
 
         assertThat(name).isEqualTo("Liverpool");
         assertThat(wins).isEqualTo(15);
