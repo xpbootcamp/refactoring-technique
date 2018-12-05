@@ -4,30 +4,40 @@ import cc.xpbootcamp.replace_data_value_with_object.Customer;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Currency {
     private static Map<String, Currency> currencies = new HashMap<>();
 
-    private String code;
+    private final String code;
 
-    private Currency(String code) {
+    public Currency(String code) {
         this.code = code;
+    }
+
+    public static Currency get(String code) {
+        return new Currency(code);
     }
 
     public String getCode() {
         return code;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        Currency currency = (Currency) o;
+        return Objects.equals(code, currency.code);
     }
 
-    public static Currency get(String code) {
-        if (currencies.containsKey(code)){
-            return currencies.get(code);
-        }
-        Currency currency = new Currency(code);
-        currencies.put(code, currency);
-        return currency;
+    @Override
+    public int hashCode() {
+        return Objects.hash(code);
     }
 }
