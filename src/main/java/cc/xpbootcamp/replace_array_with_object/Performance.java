@@ -1,21 +1,22 @@
 package cc.xpbootcamp.replace_array_with_object;
 
 public class Performance {
-    private String data[] = new String[2];
+    private String name;
+    private String wins;
 
     public void setName(String name) {
-        data[0] = name;
+        this.name = name;
     }
 
     public void setWins(String wins) {
-        data[1] = wins;
+        this.wins = wins;
     }
 
     public String getName() {
-        return data[0];
+        return name;
     }
 
     public int getWins() {
-        return Integer.parseInt(data[1]);
+        return Integer.parseInt(wins);
     }
 }
