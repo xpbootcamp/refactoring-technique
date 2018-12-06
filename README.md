@@ -31,6 +31,7 @@
 8. CVTR: Change Value to Reference
 9. CRTV: Change Reference to Value
 10. RAWO: Replace Array with Object
+11. RTCWS: Replace Type Code with Subclass
 
 ## 参考资料
 - [JUnit 5用户指南](https://sjyuan.cc/junit5/user-guide-cn/)
