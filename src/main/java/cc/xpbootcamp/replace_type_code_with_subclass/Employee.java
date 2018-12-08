@@ -6,19 +6,6 @@ public abstract class Employee {
     static final int MANAGER = 2;
 
 
-    static Employee create(int type) {
-        if (type == ENGINEER) {
-            return new Engineer();
-        }
-        if (type == SALESMAN) {
-            return new Salesman();
-        }
-        if (type == MANAGER) {
-            return new Manager();
-        }
-        throw new IllegalArgumentException("Invalid employ type [" + type + "]");
-    }
-
     public abstract int getType();
 
 
