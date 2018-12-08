@@ -6,7 +6,12 @@ public class Employee {
     static final int SALESMAN = 1;
     static final int MANAGER = 2;
 
-    public Employee(int type) {
+
+    static Employee create(int type){
+        return new Employee(type);
+    }
+
+    private Employee(int type) {
         this.type = type;
     }
 
