@@ -8,7 +8,7 @@ class EmployeeTest {
 
     @Test
     void should_calculate_correct_engineer_pay() {
-        Employee employee = new Employee(Employee.ENGINEER);
+        Employee employee = new Employee(EmployeeType.ENGINEER);
         employee.setBonus(30000);
         employee.setMonthlySalary(15000);
         employee.setCommission(5000);
@@ -17,7 +17,7 @@ class EmployeeTest {
 
     @Test
     void should_calculate_correct_salesman_pay() {
-        Employee employee = new Employee(Employee.SALESMAN);
+        Employee employee = new Employee(EmployeeType.SALESMAN);
         employee.setBonus(10000);
         employee.setMonthlySalary(3000);
         employee.setCommission(10000);
@@ -26,7 +26,7 @@ class EmployeeTest {
 
     @Test
     void should_calculate_correct_manager_pay() {
-        Employee employee = new Employee(Employee.MANAGER);
+        Employee employee = new Employee(EmployeeType.MANAGER);
         employee.setBonus(10000);
         employee.setMonthlySalary(8000);
         employee.setCommission(5000);

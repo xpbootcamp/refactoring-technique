@@ -1,10 +1,6 @@
 package cc.xpbootcamp.replace_type_code_with_state_strategy;
 
 public class Employee {
-    static final int ENGINEER = 0;
-    static final int SALESMAN = 1;
-    static final int MANAGER = 2;
-
     private EmployeeType type;
     private int monthlySalary;
     private int commission;
@@ -36,11 +32,11 @@ public class Employee {
 
     public int payAmount() {
         switch (getType()) {
-            case ENGINEER:
+            case EmployeeType.ENGINEER:
                 return monthlySalary;
-            case SALESMAN:
+            case EmployeeType.SALESMAN:
                 return monthlySalary + commission;
-            case MANAGER:
+            case EmployeeType.MANAGER:
                 return monthlySalary + bonus;
             default:
                 throw new RuntimeException("Invalid employee");
