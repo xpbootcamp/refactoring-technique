@@ -5,7 +5,7 @@ public class Employee {
     static final int SALESMAN = 1;
     static final int MANAGER = 2;
 
-    private int type;
+    private EmployeeType type;
     private int monthlySalary;
     private int commission;
     private int bonus;
@@ -27,11 +27,23 @@ public class Employee {
     }
 
     public int getType() {
-        return type;
+        return type.getTypeCode();
     }
 
     public void setType(int type) {
-        this.type = type;
+        switch (type) {
+            case ENGINEER:
+                this.type = new Engineer();
+                break;
+            case SALESMAN:
+                this.type = new Salesman();
+                break;
+            case MANAGER:
+                this.type = new Manager();
+                break;
+            default:
+                throw new RuntimeException("Invalid employee");
+        }
     }
 
     public int payAmount() {
