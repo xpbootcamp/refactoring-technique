@@ -30,20 +30,8 @@ public class Employee {
         return type.getTypeCode();
     }
 
-    public void setType(int type) {
-        switch (type) {
-            case ENGINEER:
-                this.type = new Engineer();
-                break;
-            case SALESMAN:
-                this.type = new Salesman();
-                break;
-            case MANAGER:
-                this.type = new Manager();
-                break;
-            default:
-                throw new RuntimeException("Invalid employee");
-        }
+    public void setType(int typeCode) {
+        this.type = EmployeeType.generateType(typeCode);
     }
 
     public int payAmount() {
