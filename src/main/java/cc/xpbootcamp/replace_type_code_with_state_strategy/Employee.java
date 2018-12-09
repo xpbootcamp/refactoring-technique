@@ -23,11 +23,19 @@ public class Employee {
     }
 
     public Employee(int type) {
+        setType(type);
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
         this.type = type;
     }
 
     public int payAmount() {
-        switch (type) {
+        switch (getType()) {
             case ENGINEER:
                 return monthlySalary;
             case SALESMAN:
