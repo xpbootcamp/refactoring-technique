@@ -7,15 +7,15 @@ public class Employee {
     private int bonus;
 
     public void setMonthlySalary(int monthlySalary) {
-        this.monthlySalary = monthlySalary;
+        type.setMonthlySalary(monthlySalary);
     }
 
     public void setCommission(int commission) {
-        this.commission = commission;
+        type.setCommission(commission);
     }
 
     public void setBonus(int bonus) {
-        this.bonus = bonus;
+        type.setBonus(bonus);
     }
 
     public Employee(int type) {
@@ -31,16 +31,7 @@ public class Employee {
     }
 
     public int payAmount() {
-        switch (getType()) {
-            case EmployeeType.ENGINEER:
-                return monthlySalary;
-            case EmployeeType.SALESMAN:
-                return monthlySalary + commission;
-            case EmployeeType.MANAGER:
-                return monthlySalary + bonus;
-            default:
-                throw new RuntimeException("Invalid employee");
-        }
+        return type.payAmount();
     }
 
 }
