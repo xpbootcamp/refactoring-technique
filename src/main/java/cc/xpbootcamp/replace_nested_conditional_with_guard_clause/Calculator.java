@@ -29,9 +29,10 @@ public class Calculator {
         if (capital <= 0.0) {
             return result;
         }
-        if (initRate > 0.0 && duration > 0.0) {
-            result = (income/duration)* ADJ_FACTOR;
+        if (initRate <= 0.0 || duration <= 0.0) {
+            return result;
         }
+        result = (income/duration)* ADJ_FACTOR;
         return result;
     }
 }
