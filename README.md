@@ -33,6 +33,7 @@
 10. RAWO: Replace Array with Object
 11. RTCWS: Replace Type Code with Subclass
 12. RTCWS/S: Replace Type Code with State/Strategy
+13. RNCWGC: Replace Nested Conditional with Guard Clauses
 
 
 ## 参考资料
