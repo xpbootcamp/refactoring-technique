@@ -1,5 +1,6 @@
-package cc.xpbootcamp.technique.replace_nested_conditional_with_guard_clause;
+package cc.xpbootcamp.technique.replace_nested_conditional_with_guard_clause.sample1;
 
+import cc.xpbootcamp.technique.replace_nested_conditional_with_guard_clause.sample1.Calculator;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;

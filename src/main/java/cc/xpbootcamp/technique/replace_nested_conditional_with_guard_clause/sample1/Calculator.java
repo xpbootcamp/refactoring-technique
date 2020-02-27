@@ -1,4 +1,4 @@
-package cc.xpbootcamp.technique.replace_nested_conditional_with_guard_clause;
+package cc.xpbootcamp.technique.replace_nested_conditional_with_guard_clause.sample1;
 
 public class Calculator {
     private static final double ADJ_FACTOR = 1.2;

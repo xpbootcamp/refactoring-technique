@@ -35,16 +35,36 @@ public class Customer {
     }
 
     private String generateFooter() {
+        new Fibonacci().calculate(1);
         return new StringBuffer().append("Amount owed is ").append(String.valueOf(getTotalCharge())).append("\n")
                 .append("You earned ").append(String.valueOf(getFrequentRenterPoints())).append(" frequent renter points").toString();
     }
 
+    public class Fibonacci {
+
+        public long calculate(int position) {
+            if (position == 1) {
+                return 1L;
+            }
+            return calculate(position - 1)
+                    + calculate(position - 2);
+        }
+    }
+
     private int getFrequentRenterPoints() {
-        return rentals.stream().mapToInt(Rental::getFrequentRenterPoints).sum();
+        int result = 0;
+        for (Rental rental : rentals) {
+            result += rental.getFrequentRenterPoints();
+        }
+        return result;
     }
 
     private double getTotalCharge() {
-        return rentals.stream().mapToDouble(Rental::getCharge).sum();
+        double result = 0;
+        for (Rental rental : rentals) {
+            result += rental.getCharge();
+        }
+        return result;
     }
 
 }
