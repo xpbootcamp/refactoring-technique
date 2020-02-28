@@ -1,6 +1,5 @@
-# Refactor kit
-
-[![Build Status](https://travis-ci.org/xp-bootcamp/refactor-kit.svg?branch=master)](https://travis-ci.org/xp-bootcamp/refactor-kit)
+# Refactor Technique
+重构手法
  
 
 ## 开发环境
